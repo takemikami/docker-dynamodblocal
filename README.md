@@ -13,12 +13,14 @@ http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Tools.DynamoDBLo
 Start docker container.
 
 ```
-docker run -d -v /var/log/dynamodblocal:/var/log -v /var/data/dynamodblocal:/var/dynamodblocal -p 18000:8000 -t takemikami/docker-dynamodblocal
+$ docker pull docker pull takemikami/dynamodblocal
+$ docker run -d -v /var/log/dynamodblocal:/var/log -v /var/data/dynamodblocal:/var/dynamodblocal -p 18000:8000 -t takemikami/dynamodblocal
 ```
 
 Execute sample program.
 
 sample.rb
+
 ```
 require 'aws-sdk-v1'
 
@@ -55,5 +57,5 @@ $ ruby sample.rb
 # Build Container
 
 ```
-$ docker build -t docker-dynamodblocal .
+$ docker build -t dynamodblocal .
 ```
