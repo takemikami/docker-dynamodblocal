@@ -1,0 +1,2 @@
+#!/bin/sh
+/usr/sbin/java -Djava.library.path=/opt/dynamodblocal/DynamoDBLocal_lib -jar /opt/dynamodblocal/DynamoDBLocal.jar -dbPath /var/dynamodblocal > /var/log/dynamodblocal.out 2>&1
